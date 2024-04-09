@@ -3,7 +3,7 @@ package io.acuz.clamav.client.command;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 
-public class MultiScan extends AbstractScanCommand {
+public final class MultiScan extends AbstractScanCommand {
     private final String path;
 
     public MultiScan(String path) {

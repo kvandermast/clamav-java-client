@@ -10,7 +10,7 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.channels.SocketChannel;
 
-public class InputStreamScan extends AbstractScanCommand {
+public final class InputStreamScan extends AbstractScanCommand {
     public static final int DEFAULT_CHUNK_SIZE = 2048;
 
     private final InputStream inputStream;

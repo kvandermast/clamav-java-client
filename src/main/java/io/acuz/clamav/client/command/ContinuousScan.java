@@ -4,7 +4,7 @@ import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 
-public class ContinuousScan extends AbstractScanCommand {
+public final class ContinuousScan extends AbstractScanCommand {
     private final Path path;
 
     public ContinuousScan(Path path) {

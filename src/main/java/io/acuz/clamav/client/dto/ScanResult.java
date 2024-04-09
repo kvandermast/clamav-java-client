@@ -9,6 +9,7 @@ public class ScanResult {
     private Map<String, Set<String>> results;
     private ScanStatus status;
 
+    @SuppressWarnings("unused")
     public ScanResult() {
         // default constructor for the serialization
     }
