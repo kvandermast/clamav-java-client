@@ -23,7 +23,6 @@ public abstract class AbstractScanCommand extends AbstractCommand<ScanResult> {
         } else if (RESPONSE_VIRUSES_FOUND.matcher(response).matches()) {
             var foundViruses = response.split("\n");
 
-            //stream: Eicar-Signature FOUND
             for (String foundVirus : foundViruses) {
                 var matcher = RESPONSE_VIRUS_FOUND_LINE.matcher(foundVirus);
 

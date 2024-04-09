@@ -2,7 +2,6 @@ package io.acuz.clamav.controller.impl;
 
 import io.acuz.clamav.client.ClamAvClient;
 import io.acuz.clamav.controller.AdminController;
-import io.acuz.clamav.controller.UtilController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RestController;

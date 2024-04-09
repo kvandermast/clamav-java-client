@@ -13,9 +13,6 @@ public class ScanResult {
         // default constructor for the serialization
     }
 
-
-
-
     private ScanResult(ScanStatus status) {
         this.status = status;
         this.results = Map.of();
@@ -39,12 +36,12 @@ public class ScanResult {
         return results;
     }
 
-    public ScanStatus getStatus() {
-        return status;
-    }
-
     public void setResults(Map<String, Set<String>> results) {
         this.results = results;
+    }
+
+    public ScanStatus getStatus() {
+        return status;
     }
 
     public void setStatus(ScanStatus status) {

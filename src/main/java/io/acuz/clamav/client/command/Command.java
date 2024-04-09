@@ -1,5 +1,6 @@
 package io.acuz.clamav.client.command;
 
+@SuppressWarnings("SpellCheckingInspection")
 public enum Command {
     VERSION("VERSION", Format.NULL_CHAR),
     PING("PING", Format.NULL_CHAR),

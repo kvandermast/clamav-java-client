@@ -11,6 +11,7 @@ import java.util.Map;
 @Validated
 @RestController
 public class UtilControllerImpl implements UtilController {
+    private static final String CLAM_AV = "ClamAV";
     private final ClamAvClient client;
 
     public UtilControllerImpl(ClamAvClient client) {
@@ -20,7 +21,7 @@ public class UtilControllerImpl implements UtilController {
     @Override
     public ResponseEntity<Map<String, Object>> ping() {
         if (this.client.ping()) {
-            return ResponseEntity.ok(Map.of("ClamAV", "Alive"));
+            return ResponseEntity.ok(Map.of(CLAM_AV, "Alive"));
         }
 
         return ResponseEntity.badRequest().build();
@@ -28,13 +29,13 @@ public class UtilControllerImpl implements UtilController {
 
     @Override
     public ResponseEntity<Map<String, Object>> version() {
-        return ResponseEntity.ok(Map.of("ClamAV", this.client.version()));
+        return ResponseEntity.ok(Map.of(CLAM_AV, this.client.version()));
     }
 
     @Override
     public ResponseEntity<Map<String, Object>> stats() {
         return ResponseEntity.ok(
-                Map.of("ClamAV", this.client.stats())
+                Map.of(CLAM_AV, this.client.stats())
         );
     }
 }

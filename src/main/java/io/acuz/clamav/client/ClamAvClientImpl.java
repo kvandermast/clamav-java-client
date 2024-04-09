@@ -101,9 +101,4 @@ public class ClamAvClientImpl implements ClamAvClient {
     public ScanResult parallelScan(Path path) {
         return null;
     }
-
-
-    public void destroy() {
-        LOGGER.info("Triggering destroy method");
-    }
 }

@@ -16,10 +16,6 @@ public class InputStreamScan extends AbstractScanCommand {
     private final InputStream inputStream;
     private int chunkSize = DEFAULT_CHUNK_SIZE;
 
-    public InputStreamScan(InputStream inputStream) {
-        this.inputStream = inputStream;
-    }
-
     public InputStreamScan(InputStream inputStream, int chunkSize) {
         this.inputStream = inputStream;
         this.chunkSize = chunkSize;
